@@ -1,0 +1,370 @@
+/* Load the Gothic War font */
+@font-face {
+    font-family: 'Gothic War';
+    src: url('fonts/GothicWar.woff2') format('woff2'),
+         url('fonts/GothicWar.woff') format('woff'),
+         url('fonts/GothicWar.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alte Haas Grotesk';
+    src: url('fonts/AlteHaasGrotesk-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Bold Font */
+@font-face {
+    font-family: 'Alte Haas Grotesk';
+    src: url('fonts/AlteHaasGrotesk-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px; /* Creates space between the border and the browser edge */
+    padding: 0;
+    box-sizing: border-box;
+    background: #e5dac7;
+    color: #333;
+    border: 20px solid #333; /* Border around the entire page */
+    border-image: url('images/scott-lord-P3MsdSRWprA-unsplash.jpg') 30 round; /* Correct image path */
+}
+
+body::before {
+    content: "";
+    width: 300px; /* Adjust width */
+    height: 150px; /* Half of width for a semi-circle */
+    background: #da3927; /* Match border or background */
+    position: absolute;
+    top: -60px; /* Moves it up so only the lower half is visible */
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+    border-radius: 150px 150px 0 0; /* Creates a smooth half-circle */
+    z-index: -1; /* Ensures it goes under the border */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    color: white;
+    padding: 15px 50px;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    display: flex; /* Enables Flexbox */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 100vh; /* Full height of the viewport */
+    text-align: center; /* Centers text */
+    flex-direction: column; /* Stacks elements vertically */
+    background: #007bff00; /* Background color */
+    color: #da3927; /* Text color */
+    font-family: 'Alte Haas Grotesk', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+/* Name styling */
+.name h1 {
+    font-size: 40px; /* Smaller size for your name */
+    font-family: 'Alte Haas Grotesk', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Welcome Message styling */
+.welcome p {
+    font-size: 250px !important; /* Larger size for the welcome message */
+    font-family: 'Gothic War', sans-serif;
+    text-transform: capitalize;
+}
+
+/* Spotify Table */
+.spotify-table {
+    padding: 50px;
+    text-align: center;
+    margin-top: -100px
+}
+
+.spotify-table h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-family: 'Alte Haas Grotesk', sans-serif;
+    color: #da3927;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    font-family: 'Alte Haas Grotesk', sans-serif;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #da3927;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+.album-cover {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+tr:nth-child(odd) {
+    background-color: #e6f7ff;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #cce7ff;
+    cursor: pointer;
+}
+
+/* Services Section */
+.services {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 30%;
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    padding: 50px;
+}
+
+form input, form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button {
+    background: #da3927;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Wrapper for the button and dropdown */
+.dropdown-wrapper {
+    position: fixed; 
+    top: 40px;
+    right: 40px;  /* Corrected to lowercase */
+    z-index: 1000;
+}
+
+/* Navigation Button */
+.nav-button {
+    background-color: #da3927; /* Blue background for the button */
+    color: white; /* White text */
+    font-family: 'Alte Haas Grotesk', sans-serif;
+    font-size: 1.2em;
+    padding: 30px 20px;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+/* Button hover effect */
+.nav-button:hover {
+    background-color: #741e14; /* Darker blue when hovering */
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+    opacity: 0; /* Initially hide the dropdown */
+    visibility: hidden; /* Make it invisible */
+    position: absolute; /* Position the dropdown right below the button */
+    top: 100%; /* Position it directly below the button */
+    left: 0; /* Align it to the left of the button */
+    background-color: #222; /* Dark background for the menu */
+    min-width: 200px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 999; /* Ensure dropdown stays on top of other content */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+}
+
+/* Dropdown links */
+.dropdown-content a {
+    color: white; /* White text for the links */
+    padding: 12px 16px;
+    text-decoration: none; /* Remove underline */
+    display: block; /* Make the links appear in a block format */
+    font-family: 'Alte Haas Grotesk', sans-serif;
+}
+
+/* Change color of links when hovered */
+.dropdown-content a:hover {
+    background-color: #da3927; /* Blue background when hovering over links */
+}
+
+/* Show the dropdown when hovering over the wrapper (button or dropdown) */
+.dropdown-wrapper:hover .dropdown-content {
+    opacity: 1; /* Make the dropdown visible */
+    visibility: visible; /* Make the dropdown visible */
+}
+
+
+
+
+
+
+/* About Section */
+.about {
+    padding: 50px;
+    background-color: #e5dac7;
+    text-align: center;
+    font-family: 'Alte Haas Grotesk', sans-serif;
+}
+
+.about h2 {
+    color: #da3927;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about h3 {
+    font-size: 2em;
+    color: #da3927;
+    margin-top: 40px;
+}
+
+.about ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.1em;
+    color: #333;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.about ul li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.about ul li::before {
+    content: "✔"; /* Checkmark icon before each list item */
+    color: #da3927;
+    padding-right: 10px;
+}
+
+
+/* Maintext Section */
+.Maintext {
+    display: flex; /* Enables Flexbox */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 100vh; /* Full height of the viewport */
+    text-align: center; /* Centers text */
+    flex-direction: column; /* Stacks elements vertically */
+    background: #007bff00; /* Same background color as hero */
+    color: #da3927; /* Text color */
+    font-family: 'Alte Haas Grotesk', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+.Maintext h2 {
+    font-size: 40px; /* Same size as hero heading */
+    font-family: 'Alte Haas Grotesk', sans-serif;
+    margin-bottom: 20px;
+}
+
+.Maintext p {
+    font-size: 100px !important; /* Same font size as welcome message in hero */
+    font-family: 'Gothic War', sans-serif;
+    text-transform: capitalize;
+    white-space: nowrap;
+    word-spacing: -10px;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+    font-family: 'Alte Haas Grotesk', sans-serif;
+    font-size: 1em;
+}
+
+
+/* Social Media Icons */
+.social-media {
+    margin-top: 20px;
+}
+
+.social-icon {
+    font-size: 2em;
+    margin: 0 15px;
+    color: #333; /* Default icon color */
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #da3927; /* Change color when hovering */
+}
