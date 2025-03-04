@@ -96,11 +96,38 @@ nav a {
     margin-bottom: 20px;
 }
 
+/* Adjust font size for smaller screens */
+@media (max-width: 768px) {
+    .name h1 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .name h1 {
+        font-size: 28px;
+    }
+}
+
+
 /* Welcome Message styling */
 .welcome p {
     font-size: 250px !important; /* Larger size for the welcome message */
     font-family: 'Gothic War', sans-serif;
     text-transform: capitalize;
+}
+
+/* Reduce size for smaller screens */
+@media (max-width: 768px) {
+    .welcome p {
+        font-size: 15vw; /* Adjusts for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome p {
+        font-size: 18vw; /* Adjusts for mobile phones */
+    }
 }
 
 /* Spotify Table */
