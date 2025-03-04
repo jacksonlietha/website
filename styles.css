@@ -341,6 +341,15 @@ button {
     word-spacing: -10px;
 }
 
+@media (max-width: 600px) {
+    .Maintext h2 {
+        font-size: 1.5rem;
+    }
+
+    .Maintext p {
+        font-size: 1rem;
+    }
+}
 
 /* Footer */
 footer {
