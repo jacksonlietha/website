@@ -32,7 +32,7 @@ body {
     background: #e5dac7;
     color: #333;
     border: 20px solid #333; /* Border around the entire page */
-    border-image: url('images/scott-lord-P3MsdSRWprA-unsplash.jpg') 30 round; /* Correct image path */
+    border-image: url('scott-lord-P3MsdSRWprA-unsplash.jpg') 30 round; /* Correct image path */
 }
 
 body::before {
